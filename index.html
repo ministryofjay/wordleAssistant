@@ -13014,7 +13014,7 @@
           if (input.getAttribute("data-type") === "value") {
             currentRow = parseInt(input.getAttribute("data-row"));
             currentIndex = parseInt(input.getAttribute("data-index"));
-            currentValue = input.value;
+            currentValue = input.value.toLowerCase();
             continue;
           }
           if (input.getAttribute("data-type") == "type") {
@@ -13060,7 +13060,7 @@
           inputElm.size = 1;
           inputElm.setAttribute("data-row", i);
           inputElm.setAttribute("data-index", j);
-          inputElm.setAttribute("data-type", "value").toLowerCase();
+          inputElm.setAttribute("data-type", "value");
           inputElm.classList.add("inputs");
           const selectElm = document.createElement("select");
           selectElm.setAttribute("data-row", i);
